@@ -1,3 +1,11 @@
+# Prerequisites
+
+Install NVM for installing Node and YVM for installing Yarn.
+
+# Selecting Node version
+
+Run `nvm use` in the project root directory. NVM will use .nvmrc file to pick up correct version of Node.
+
 # NgAppForms
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.

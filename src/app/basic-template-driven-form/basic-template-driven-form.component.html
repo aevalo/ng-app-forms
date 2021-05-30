@@ -1,0 +1,37 @@
+<div class="d-flex">
+  <form class="needs-validation" (ngSubmit)="onSubmit()" #basicForm="ngForm" novalidate>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name"
+             name="name"
+             type="text"
+             class="form-control"
+             [ngClass]="{'is-invalid': name.invalid && name.touched, 'is-valid': name.valid}"
+             required
+             [(ngModel)]="model.name"
+             #name="ngModel">
+      <div class="invalid-feedback" *ngIf="name.errors?.required">Name is required</div>
+      <label for="age">Age</label>
+      <input id="age"
+             name="age"
+             type="number"
+             class="form-control"
+             required
+             min="18"
+             [ngClass]="{'is-invalid': age.invalid, 'is-valid': age.valid}"
+             [(ngModel)]="model.age"
+             #age="ngModel">
+      <div class="invalid-feedback" *ngIf="age.errors?.required">Age is required</div>
+      <div class="invalid-feedback" *ngIf="age.errors?.min">Age must be at least 18</div>
+      <label for="nickname">Nickname</label>
+      <input id="nickname"
+             name="nickname"
+             type="text"
+             class="form-control"
+             [ngClass]="{'is-invalid': nickname.invalid && nickname.touched, 'is-valid': nickname.valid}"
+             [(ngModel)]="model.nickname"
+             #nickname="ngModel">
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!basicForm.form.valid">Submit</button>
+  </form>
+</div>

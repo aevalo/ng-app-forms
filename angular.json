@@ -109,8 +109,8 @@
           "builder": "@briebug/cypress-schematic:cypress",
           "options": {
             "devServerTarget": "ng-app-forms:serve",
-            "watch": true,
-            "headless": false
+            "watch": false,
+            "headless": true
           },
           "configurations": {
             "production": {
@@ -134,7 +134,9 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ng-app-forms:serve:production"
+              "devServerTarget": "ng-app-forms:serve:production",
+              "watch": false,
+              "headless": false
             }
           }
         },

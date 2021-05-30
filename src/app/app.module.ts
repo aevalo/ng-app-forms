@@ -2,15 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { BasicFormComponent } from './basic-form/basic-form.component';
+import { BasicTemplateDrivenFormComponent } from './basic-template-driven-form/basic-template-driven-form.component';
+import { MinDirective } from './min-validator.directive';
 
 @NgModule({
   imports: [
@@ -29,7 +27,8 @@ import { BasicFormComponent } from './basic-form/basic-form.component';
   ],
   declarations: [
     AppComponent,
-    BasicFormComponent
+    BasicTemplateDrivenFormComponent,
+    MinDirective
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { jest } from '@jest/globals'
-import { BasicFormComponent } from './basic-form.component';
+import { BasicTemplateDrivenFormComponent } from './basic-template-driven-form.component';
 
 describe('BasicFormComponent', () => {
-  let component: BasicFormComponent;
-  let fixture: ComponentFixture<BasicFormComponent>;
+  let component: BasicTemplateDrivenFormComponent;
+  let fixture: ComponentFixture<BasicTemplateDrivenFormComponent>;
   let onSubmitSpy: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ FormsModule ],
-      declarations: [ BasicFormComponent ]
+      declarations: [ BasicTemplateDrivenFormComponent ]
     }).compileComponents();
   });
 
   beforeEach(async () => {
-    fixture = TestBed.createComponent(BasicFormComponent);
+    fixture = TestBed.createComponent(BasicTemplateDrivenFormComponent);
     component = fixture.componentInstance;
     onSubmitSpy = jest.spyOn(component, 'onSubmit');
     fixture.detectChanges();

@@ -2,34 +2,48 @@
 
 Install NVM for installing Node and YVM for installing Yarn.
 
-# Selecting Node version
+## Selecting Node version
 
 Run `nvm use` in the project root directory. NVM will use .nvmrc file to pick up correct version of Node.
 
-# NgAppForms
+## Selecting Yarn version
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+Run `yvm use` in the project root directory. YVM will use .yvmrc file to pick up correct version of Yarn.
 
-## Development server
+# Package commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+These are the most useful commands for the project
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `yarn ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `yarn ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Running linter
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `yarn lint` to run linter for code and tests.
 
-## Running end-to-end tests
+## Development server
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `yarn serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Further help
+Run `yarn serve:open` for a dev server, which is automatically opened in default browser. Otherwise same as `yarn serve`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Running tests
+
+In this project, unit tests are implemented using Jest framework, and E2E tests are implemented using Cypress framework.
+
+### Running unit tests
+
+Run `yarn test` to run unit tests. The tests are implemented in Jest, and will be executed in console. Output will provide coverage summary.
+
+### Running end-to-end tests
+
+Run `yarn e2e` to run E2E tests in headless mode.
+
+Run `yarn cypress:run` to run E2E tests in browser, without watching changes in sources.
+
+Run `yarn cypress:open` to run E2E tests in browser, watching changes in sources.

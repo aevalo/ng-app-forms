@@ -8,6 +8,9 @@
       "files": [
         "*.ts"
       ],
+      "env": {
+        "jest": true // now **/*.test.js files' env has both es6 *and* jest
+      },
       "parserOptions": {
         "project": [
           "tsconfig.json",
@@ -15,6 +18,7 @@
         ],
         "createDefaultProgram": true
       },
+      "plugins": ["jest"],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"

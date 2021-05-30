@@ -1,15 +1,18 @@
-//const esModules = ['[thir-party-lib]'].join('|');
-
 module.exports = {
+  bail: 1,
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ["html", "text"],
   globals: {
     'ts-jest': {
       allowSyntheticDefaultImports: true,
     },
   },
-  //transformIgnorePatterns: [`<rootDir>/node_modules/(?!${esModules})`],
   transform: {
     '^.+\\.js$': 'babel-jest',
   },
-  bail: 1,
+  testMatch: [
+    '**/*.spec.ts'
+  ],
   verbose: true
 };

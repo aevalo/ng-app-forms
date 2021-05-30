@@ -40,11 +40,13 @@
             "style": "kebab-case"
           }
         ],
-        "jest/no-disabled-tests": "warn",
+        "jest/no-disabled-tests": "error",
         "jest/no-focused-tests": "error",
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error"
+        "jest/valid-expect": "error",
+        "jest/prefer-spy-on": "warn",
+        "jest/valid-expect-in-promise": "error"
       }
     },
     {

@@ -102,9 +102,7 @@
               "doctype",
               "styleTransform",
               "matchMedia"
-            ],
-            "collectCoverage": true,
-            "coverageDirectory": "coverage"
+            ]
           }
         },
         "e2e": {

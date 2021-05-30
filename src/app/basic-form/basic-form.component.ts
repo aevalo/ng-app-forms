@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 type ModelFields = 'name';
 type ModelType = Record<ModelFields, any>;
@@ -8,13 +8,11 @@ type ModelType = Record<ModelFields, any>;
   templateUrl: './basic-form.component.html',
   styleUrls: ['./basic-form.component.scss']
 })
-export class BasicFormComponent implements OnInit {
+export class BasicFormComponent {
   public submitted: boolean = false;
   public model: ModelType = {'name': undefined};
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
   public onSubmit(): void {

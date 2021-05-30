@@ -17,8 +17,8 @@ export class InMemoryDataService implements InMemoryDbService {
   // the method below returns the initial number (11).
   // if the heroes array is not empty, the method below returns the highest
   // hero id + 1.
-  public genId(data: Record<string, any>): number {
+  public genId(data: Record<string, any>): number | undefined | null {
     const keys: string[] = Object.keys(data);
-    return keys.length > 0 ? keys.length + 1 : 0;
+    return keys.length > 0 ? keys.length : undefined;
   }
 }
